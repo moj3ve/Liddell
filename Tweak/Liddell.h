@@ -1,5 +1,5 @@
 #import <UIKit/UIKit.h>
-#import "MarqueeLabel.h"
+#import "Liddell-Swift.h"
 #import <Kitten/libKitten.h>
 #import "GcUniversal/GcColorPickerUtils.h"
 #import <Cephei/HBPreferences.h>

@@ -167,7 +167,7 @@
                 [[self liddellContentLabel] setTextColor:[GcColorPickerUtils colorWithHex:customTextColorValue]];
             }
         }
-        [[self liddellContentLabel] setRate:[scrollRateValue doubleValue]];
+        [[self liddellContentLabel] setScrollRate:[scrollRateValue doubleValue]];
         [[self liddellContentLabel] setFadeLength:5];
         [[self liddellView] addSubview:[self liddellContentLabel]];
 
