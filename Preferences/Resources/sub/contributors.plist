@@ -9,7 +9,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Code idea/base by</string>
+			<string>Code Idea/Base</string>
 		</dict>
 		<dict>
             <key>cell</key>
@@ -28,7 +28,7 @@
             <key>cell</key>
             <string>PSGroupCell</string>
             <key>label</key>
-            <string>Marquee label</string>
+            <string>Marquee Label</string>
         </dict>
         <dict>
             <key>cellClass</key>
@@ -43,7 +43,7 @@
             <key>cell</key>
             <string>PSGroupCell</string>
             <key>label</key>
-            <string>Duo twitter cell by</string>
+            <string>Duo Twitter Cell</string>
         </dict>
         <dict>
             <key>cell</key>

@@ -36,7 +36,7 @@
 			<key>key</key>
 			<string>showIcon</string>
 			<key>label</key>
-			<string>Show icon</string>
+			<string>Show Icon</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -48,7 +48,7 @@
 			<key>key</key>
 			<string>showTitle</string>
 			<key>label</key>
-			<string>Show title</string>
+			<string>Show Title</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -60,7 +60,7 @@
 			<key>key</key>
 			<string>showMessage</string>
 			<key>label</key>
-			<string>Show message</string>
+			<string>Show Message</string>
 		</dict>
 
 		<dict>
@@ -97,7 +97,7 @@
 			<key>cell</key>
 			<string>PSStaticTextCell</string>
 			<key>label</key>
-			<string>Corner radius</string>
+			<string>Corner Radius</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -145,7 +145,7 @@
 			<key>cell</key>
 			<string>PSStaticTextCell</string>
 			<key>label</key>
-			<string>Scroll rate</string>
+			<string>Scroll Rate</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -176,7 +176,7 @@
 			<key>cell</key>
 			<string>PSStaticTextCell</string>
 			<key>label</key>
-			<string>Background color</string>
+			<string>Background Color</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -208,7 +208,7 @@
 			<key>cellClass</key>
 			<string>GcColorPickerCell</string>
 			<key>label</key>
-			<string>Custom background color:</string>
+			<string>Custom Background Color:</string>
 			<key>defaults</key>
 			<string>love.litten.liddellpreferences</string>
 			<key>key</key>
@@ -250,7 +250,7 @@
 			<key>cell</key>
 			<string>PSStaticTextCell</string>
 			<key>label</key>
-			<string>Blur amount</string>
+			<string>Blur Amount</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -287,7 +287,7 @@
 			<key>cell</key>
 			<string>PSStaticTextCell</string>
 			<key>label</key>
-			<string>Corner radius</string>
+			<string>Corner Radius</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -318,7 +318,7 @@
 			<key>cell</key>
 			<string>PSStaticTextCell</string>
 			<key>label</key>
-			<string>Text color</string>
+			<string>Text Color</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -350,7 +350,7 @@
 			<key>cellClass</key>
 			<string>GcColorPickerCell</string>
 			<key>label</key>
-			<string>Custom text color:</string>
+			<string>Custom Text Color:</string>
 			<key>defaults</key>
 			<string>love.litten.liddellpreferences</string>
 			<key>key</key>
@@ -394,7 +394,7 @@
 			<key>cell</key>
 			<string>PSStaticTextCell</string>
 			<key>label</key>
-			<string>Title font size</string>
+			<string>Title Font Size</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -420,7 +420,7 @@
 			<key>cell</key>
 			<string>PSStaticTextCell</string>
 			<key>label</key>
-			<string>Content font size</string>
+			<string>Content Font Size</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -453,7 +453,7 @@
 			<key>cell</key>
 			<string>PSStaticTextCell</string>
 			<key>label</key>
-			<string>Border width</string>
+			<string>Border Width</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -479,7 +479,7 @@
 			<key>cell</key>
 			<string>PSStaticTextCell</string>
 			<key>label</key>
-			<string>Border color</string>
+			<string>Border Color</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -509,7 +509,7 @@
 			<key>cellClass</key>
 			<string>GcColorPickerCell</string>
 			<key>label</key>
-			<string>Custom border color:</string>
+			<string>Custom Border Color:</string>
 			<key>defaults</key>
 			<string>love.litten.liddellpreferences</string>
 			<key>key</key>
@@ -524,7 +524,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Other options</string>
+			<string>Other Options</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -538,7 +538,7 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>label</key>
-			<string>Reset preferences</string>
+			<string>Reset Preferences</string>
 			<key>action</key>
 			<string>resetPrompt</string>
 		</dict>
@@ -613,32 +613,11 @@
 			<key>cellClass</key>
 			<string>HBLinkTableCell</string>
 			<key>label</key>
-			<string>Source code</string>
+			<string>Source Code</string>
 			<key>subtitle</key>
 			<string>GitHub 🫖</string>
 			<key>url</key>
 			<string>https://github.com/schneelittchen/Liddell</string>
-		</dict>
-		<dict>
-			<key>cellClass</key>
-			<string>HBLinkTableCell</string>
-			<key>label</key>
-			<string>Donate to Litten</string>
-			<key>subtitle</key>
-			<string>Appreciated 💝</string>
-			<key>url</key>
-			<string>https://paypal.me/Litteeen</string>
-		</dict>
-
-		<dict>
-			<key>cell</key>
-			<key>PSGroupCell</key>
-			<key>footerText</key>
-			<string>loving with the sky</string>
-			<key>isStaticText</key>
-			<true/>
-			<key>footerAlignment</key>
-			<real>1</real>
 		</dict>
 
 	</array>
