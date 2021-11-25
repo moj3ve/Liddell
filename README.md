@@ -2,24 +2,25 @@
 Liddell notification banners
 
 ## Installation
-1. Add this repository to your Package Manager: https://repo.litten.love
+1. Add this repository to your package manager: https://repo.litten.love
 2. Install Liddell
 
 ## Compiling
+  - [Theos](https://theos.dev/) is required to compile the project
   - Depends on libKitten and libGCUniversal
-  - You may want to edit the `Makefiles` to suit your theos installation
+  - You may want to edit the root `Makefile` to use your Theos SDK
 
 ## License
-If you take code from this repository please link it, or my [twitter](https://twitter.com/schneelittchen) to your project  
+If you take code from this repository please link it, or my [Twitter](https://twitter.com/schneelittchen) to your project  
 You may not redistribute this source code or packages from it  
 You may not use this project to make profit like money
 
 ## Credits
-  - Code base/idea
+  - Code Base/Idea
     - [NepetaDev](https://twitter.com/NepetaDev)
-  - Marquee label
+  - Marquee Label
     - [Charles Powell](https://github.com/cbpowell)
-  - Icon and Banner
+  - Icon And Banner
     - [74k1_](https://twitter.com/74k1_)
-  - Duo twitter cell
+  - Duo Twitter Cell
     - [arm64e](https://twitter.com/arm64e), [MrGcGamer](https://twitter.com/MrGcGamer)
