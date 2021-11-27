@@ -22,5 +22,3 @@ You may not use this project to make profit like money
     - [Charles Powell](https://github.com/cbpowell)
   - Icon And Banner
     - [74k1_](https://twitter.com/74k1_)
-  - Duo Twitter Cell
-    - [arm64e](https://twitter.com/arm64e), [MrGcGamer](https://twitter.com/MrGcGamer)

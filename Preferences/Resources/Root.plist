@@ -7,17 +7,17 @@
 	
 		<dict>
 			<key>cellClass</key>
-			<string>DuoTwitterCell</string>
-			<key>firstLabel</key>
-			<string>🌸 Litten</string>
-			<key>firstAccount</key>
+			<string>CustomTwitterCell</string>
+			<key>leftUserDisplayName</key>
+			<string>Litten</string>
+			<key>leftUserUsername</key>
 			<string>schneelittchen</string>
-			<key>secondLabel</key>
+			<key>rightUserDisplayName</key>
 			<string>taki</string>
-			<key>secondAccount</key>
+			<key>rightUserUsername</key>
 			<string>74k1_</string>
 			<key>height</key>
-			<real>57</real>
+			<real>60</real>
 		</dict>
 
 		<dict>
