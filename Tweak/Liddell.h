@@ -14,30 +14,30 @@ BOOL showTitleSwitch = YES;
 BOOL showMessageSwitch = YES;
 
 // style
-NSString* heightValue = @"40";
-NSString* cornerRadiusValue = @"8";
-NSString* offsetValue = @"0";
-NSString* scrollRateValue = @"50";
+CGFloat heightValue = 40;
+CGFloat cornerRadiusValue = 8;
+CGFloat offsetValue = 0;
+CGFloat scrollRateValue = 50;
 
 // background
-NSString* backgroundColorValue = @"0";
+NSUInteger backgroundColorValue = 0;
 NSString* customBackgroundColorValue = @"000000";
-NSString* blurModeValue = @"3";
-NSString* blurAmountValue = @"1";
+NSUInteger blurModeValue = 3;
+CGFloat blurAmountValue = 1;
 
 // icon
-NSString* iconCornerRadiusValue = @"0";
+CGFloat iconCornerRadiusValue = 0;
 
 // text
-NSString* textColorValue = @"0";
+NSUInteger textColorValue = 0;
 NSString* customTextColorValue = @"FFFFFF";
-NSString* textContentValue = @"2";
-NSString* titleFontSizeValue = @"15";
-NSString* contentFontSizeValue = @"14";
+NSUInteger textContentValue = 2;
+NSUInteger titleFontSizeValue = 15;
+NSUInteger contentFontSizeValue = 14;
 
 // border
-NSString* borderWidthValue = @"0";
-NSString* borderColorValue = @"0";
+NSUInteger borderWidthValue = 0;
+NSUInteger borderColorValue = 0;
 NSString* customBorderColorValue = @"FFFFFF";
 
 @interface MTPlatterView : UIView

@@ -32,33 +32,33 @@ dispatch_queue_t queue;
     if (![self liddellView]) {
         self.liddellView = [UIView new];
         [[self liddellView] setClipsToBounds:YES];
-        [[[self liddellView] layer] setCornerRadius:[cornerRadiusValue doubleValue]];
-        if ([backgroundColorValue intValue] == 1) [[self liddellView] setBackgroundColor:[[libKitten backgroundColor:[[self icons] objectAtIndex:0]] colorWithAlphaComponent:1]];
-        else if ([backgroundColorValue intValue] == 2) [[self liddellView] setBackgroundColor:[GcColorPickerUtils colorWithHex:customBackgroundColorValue]];
-        if ([borderWidthValue intValue] != 0) {
-            [[[self liddellView] layer] setBorderWidth:[borderWidthValue intValue]];
-            if ([borderColorValue intValue] == 0) [[[self liddellView] layer] setBorderColor:[[[libKitten primaryColor:[[self icons] objectAtIndex:0]] colorWithAlphaComponent:1] CGColor]];
-            else if ([borderColorValue intValue] == 1) [[[self liddellView] layer] setBorderColor:[[GcColorPickerUtils colorWithHex:customBorderColorValue] CGColor]];
+        [[[self liddellView] layer] setCornerRadius:cornerRadiusValue];
+        if (backgroundColorValue == 1) [[self liddellView] setBackgroundColor:[[libKitten backgroundColor:[[self icons] objectAtIndex:0]] colorWithAlphaComponent:1]];
+        else if (backgroundColorValue == 2) [[self liddellView] setBackgroundColor:[GcColorPickerUtils colorWithHex:customBackgroundColorValue]];
+        if (borderWidthValue != 0) {
+            [[[self liddellView] layer] setBorderWidth:borderWidthValue];
+            if (borderColorValue == 0) [[[self liddellView] layer] setBorderColor:[[[libKitten primaryColor:[[self icons] objectAtIndex:0]] colorWithAlphaComponent:1] CGColor]];
+            else if (borderColorValue == 1) [[[self liddellView] layer] setBorderColor:[[GcColorPickerUtils colorWithHex:customBorderColorValue] CGColor]];
         }
         [self addSubview:[self liddellView]];
 
         [[self liddellView] setTranslatesAutoresizingMaskIntoConstraints:NO];
         [NSLayoutConstraint activateConstraints:@[
-            [self.liddellView.topAnchor constraintEqualToAnchor:self.topAnchor constant:[offsetValue doubleValue]],
+            [self.liddellView.topAnchor constraintEqualToAnchor:self.topAnchor constant:offsetValue],
             [self.liddellView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor],
             [self.liddellView.trailingAnchor constraintEqualToAnchor:self.trailingAnchor],
-            [self.liddellView.heightAnchor constraintEqualToConstant:[heightValue doubleValue]],
+            [self.liddellView.heightAnchor constraintEqualToConstant:heightValue],
         ]];
     }
 
 
     // blur
-    if ([blurModeValue intValue] != 0 && ![self liddellBlurView]) {
-		if ([blurModeValue intValue] == 1) self.liddellBlur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
-        if ([blurModeValue intValue] == 2) self.liddellBlur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-        else if ([blurModeValue intValue] == 3) self.liddellBlur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
+    if (blurModeValue != 0 && ![self liddellBlurView]) {
+		if (blurModeValue == 1) self.liddellBlur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+        if (blurModeValue == 2) self.liddellBlur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        else if (blurModeValue == 3) self.liddellBlur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
 		self.liddellBlurView = [[UIVisualEffectView alloc] initWithEffect:[self liddellBlur]];
-        [[self liddellBlurView] setAlpha:[blurAmountValue doubleValue]];
+        [[self liddellBlurView] setAlpha:blurAmountValue];
 		[[self liddellView] addSubview:[self liddellBlurView]];
 
         [[self liddellBlurView] setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -77,15 +77,15 @@ dispatch_queue_t queue;
         [[self liddellIconView] setImage:[[self icons] objectAtIndex:0]];
         [[self liddellIconView] setContentMode:UIViewContentModeScaleAspectFit];
         [[self liddellIconView] setClipsToBounds:YES];
-        [[[self liddellIconView] layer] setCornerRadius:[iconCornerRadiusValue doubleValue]];
+        [[[self liddellIconView] layer] setCornerRadius:iconCornerRadiusValue];
         [[self liddellView] addSubview:[self liddellIconView]];
 
         [[self liddellIconView] setTranslatesAutoresizingMaskIntoConstraints:NO];
         [NSLayoutConstraint activateConstraints:@[
             [self.liddellIconView.leadingAnchor constraintEqualToAnchor:self.liddellView.leadingAnchor constant:8],
             [self.liddellIconView.centerYAnchor constraintEqualToAnchor:self.liddellView.centerYAnchor],
-            [self.liddellIconView.heightAnchor constraintEqualToConstant:[heightValue doubleValue] - 13],
-            [self.liddellIconView.widthAnchor constraintEqualToConstant:[heightValue doubleValue] - 13],
+            [self.liddellIconView.heightAnchor constraintEqualToConstant:heightValue - 13],
+            [self.liddellIconView.widthAnchor constraintEqualToConstant:heightValue - 13],
         ]];
     }
 
@@ -94,10 +94,10 @@ dispatch_queue_t queue;
     if (showTitleSwitch && ![self liddellTitleLabel]) {
         self.liddellTitleLabel = [UILabel new];
         [[self liddellTitleLabel] setText:[[self title] capitalizedString]];
-        [[self liddellTitleLabel] setFont:[UIFont boldSystemFontOfSize:[titleFontSizeValue intValue]]];
-        if ([textContentValue intValue] == 0 || [textContentValue intValue] == 2) {
-            if ([textColorValue intValue] == 0) {
-                if ([backgroundColorValue intValue] == 0) {
+        [[self liddellTitleLabel] setFont:[UIFont boldSystemFontOfSize:titleFontSizeValue]];
+        if (textContentValue == 0 || textContentValue == 2) {
+            if (textColorValue == 0) {
+                if (backgroundColorValue == 0) {
                     if (![[[self liddellBlurView] effect] isEqual:[UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular]]) {
                         if ([[[self liddellBlurView] effect] isEqual:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]]) {
                             [[self liddellTitleLabel] setTextColor:[UIColor whiteColor]];
@@ -114,9 +114,9 @@ dispatch_queue_t queue;
                         [[self liddellTitleLabel] setTextColor:[UIColor blackColor]];
                     }
                 }
-            } else if ([textColorValue intValue] == 1) {
+            } else if (textColorValue == 1) {
                 [[self liddellTitleLabel] setTextColor:[libKitten secondaryColor:[[self icons] objectAtIndex:0]]];
-            } else if ([textColorValue intValue] == 2) {
+            } else if (textColorValue == 2) {
                 [[self liddellTitleLabel] setTextColor:[GcColorPickerUtils colorWithHex:customTextColorValue]];
             }
         }
@@ -144,10 +144,10 @@ dispatch_queue_t queue;
         self.liddellContentLabel = [MarqueeLabel new];
         if ([self primaryText] && [self secondaryText]) [[self liddellContentLabel] setText:[NSString stringWithFormat:@"%@: %@", [self primaryText], [self secondaryText]]];
         else [[self liddellContentLabel] setText:[[self secondaryText] stringByReplacingOccurrencesOfString:@"\n" withString:@": "]];
-        [[self liddellContentLabel] setFont:[UIFont systemFontOfSize:[contentFontSizeValue intValue]]];
-        if ([textContentValue intValue] == 1 || [textContentValue intValue] == 2) {
-            if ([textColorValue intValue] == 0) {
-                if ([backgroundColorValue intValue] == 0) {
+        [[self liddellContentLabel] setFont:[UIFont systemFontOfSize:contentFontSizeValue]];
+        if (textContentValue == 1 || textContentValue == 2) {
+            if (textColorValue == 0) {
+                if (backgroundColorValue == 0) {
                     if (![[[self liddellBlurView] effect] isEqual:[UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular]]) {
                         if ([[[self liddellBlurView] effect] isEqual:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]]) {
                             [[self liddellContentLabel] setTextColor:[UIColor whiteColor]];
@@ -164,13 +164,13 @@ dispatch_queue_t queue;
                         [[self liddellContentLabel] setTextColor:[UIColor blackColor]];
                     }
                 }
-            } else if ([textColorValue intValue] == 1) {
+            } else if (textColorValue == 1) {
                 [[self liddellContentLabel] setTextColor:[libKitten secondaryColor:[[self icons] objectAtIndex:0]]];
-            } else if ([textColorValue intValue] == 2) {
+            } else if (textColorValue == 2) {
                 [[self liddellContentLabel] setTextColor:[GcColorPickerUtils colorWithHex:customTextColorValue]];
             }
         }
-        [[self liddellContentLabel] setScrollRate:[scrollRateValue doubleValue]];
+        [[self liddellContentLabel] setScrollRate:scrollRateValue];
         [[self liddellContentLabel] setFadeLength:5];
         [[self liddellView] addSubview:[self liddellContentLabel]];
 
@@ -257,32 +257,32 @@ void testBanner() {
     [preferences registerBool:&showMessageSwitch default:YES forKey:@"showMessage"];
 
     // style
-    [preferences registerObject:&heightValue default:@"40" forKey:@"height"];
-    [preferences registerObject:&cornerRadiusValue default:@"8" forKey:@"cornerRadius"];
-    [preferences registerObject:&offsetValue default:@"0" forKey:@"offset"];
-    [preferences registerObject:&scrollRateValue default:@"50" forKey:@"scrollRate"];
+    [preferences registerFloat:&heightValue default:40 forKey:@"height"];
+    [preferences registerFloat:&cornerRadiusValue default:8 forKey:@"cornerRadius"];
+    [preferences registerFloat:&offsetValue default:0 forKey:@"offset"];
+    [preferences registerFloat:&scrollRateValue default:50 forKey:@"scrollRate"];
 
     // background
-    [preferences registerObject:&backgroundColorValue default:@"0" forKey:@"backgroundColor"];
-    if ([backgroundColorValue intValue] == 2) [preferences registerObject:&customBackgroundColorValue default:@"000000" forKey:@"customBackgroundColor"];
-    [preferences registerObject:&blurModeValue default:@"3" forKey:@"blurMode"];
-    if ([blurModeValue intValue] != 0) [preferences registerObject:&blurAmountValue default:@"1" forKey:@"blurAmount"];
+    [preferences registerUnsignedInteger:&backgroundColorValue default:0 forKey:@"backgroundColor"];
+    if (backgroundColorValue == 2) [preferences registerObject:&customBackgroundColorValue default:@"000000" forKey:@"customBackgroundColor"];
+    [preferences registerUnsignedInteger:&blurModeValue default:3 forKey:@"blurMode"];
+    if (blurModeValue != 0) [preferences registerFloat:&blurAmountValue default:1 forKey:@"blurAmount"];
 
     // icon
-    [preferences registerObject:&iconCornerRadiusValue default:@"0" forKey:@"iconCornerRadius"];
+    [preferences registerFloat:&iconCornerRadiusValue default:0 forKey:@"iconCornerRadius"];
     
     // text
-    [preferences registerObject:&textColorValue default:@"0" forKey:@"textColor"];
-    if ([textColorValue intValue] != 0) [preferences registerObject:&customTextColorValue default:@"FFFFFF" forKey:@"customTextColor"];
-    [preferences registerObject:&textContentValue default:@"2" forKey:@"textContent"];
-    [preferences registerObject:&titleFontSizeValue default:@"15" forKey:@"titleFontSize"];
-    [preferences registerObject:&contentFontSizeValue default:@"14" forKey:@"contentFontSize"];
+    [preferences registerUnsignedInteger:&textColorValue default:0 forKey:@"textColor"];
+    if (textColorValue != 0) [preferences registerObject:&customTextColorValue default:@"FFFFFF" forKey:@"customTextColor"];
+    [preferences registerUnsignedInteger:&textContentValue default:2 forKey:@"textContent"];
+    [preferences registerUnsignedInteger:&titleFontSizeValue default:15 forKey:@"titleFontSize"];
+    [preferences registerUnsignedInteger:&contentFontSizeValue default:14 forKey:@"contentFontSize"];
 
     // border
-    [preferences registerObject:&borderWidthValue default:@"0" forKey:@"borderWidth"];
-    if ([borderWidthValue intValue] != 0) {
-        [preferences registerObject:&borderColorValue default:@"0" forKey:@"borderColor"];
-        if ([borderColorValue intValue] != 0) [preferences registerObject:&customBorderColorValue default:@"FFFFFF" forKey:@"customBorderColor"];
+    [preferences registerUnsignedInteger:&borderWidthValue default:0 forKey:@"borderWidth"];
+    if (borderWidthValue != 0) {
+        [preferences registerUnsignedInteger:&borderColorValue default:0 forKey:@"borderColor"];
+        if (borderColorValue != 0) [preferences registerObject:&customBorderColorValue default:@"FFFFFF" forKey:@"customBorderColor"];
     }
     
     %init(Liddell);
