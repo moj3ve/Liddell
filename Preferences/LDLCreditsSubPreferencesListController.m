@@ -1,6 +1,6 @@
-#import "LDLContributorsSubPreferencesListController.h"
+#import "LDLCreditsSubPreferencesListController.h"
 
-@implementation LDLContributorsSubPreferencesListController
+@implementation LDLCreditsSubPreferencesListController
 
 - (void)viewDidLoad {
 

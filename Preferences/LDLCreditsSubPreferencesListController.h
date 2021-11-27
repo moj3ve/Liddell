@@ -7,7 +7,7 @@
 @interface LDLAppearanceSettings : HBAppearanceSettings
 @end
 
-@interface LDLContributorsSubPreferencesListController : HBListController
+@interface LDLCreditsSubPreferencesListController : HBListController
 @property(nonatomic, retain)LDLAppearanceSettings* appearanceSettings;
 @property(nonatomic, retain)UILabel* titleLabel;
 @property(nonatomic, retain)UIBlurEffect* blur;
