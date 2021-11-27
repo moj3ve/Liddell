@@ -106,12 +106,6 @@
         [alertController addAction:confirmAction];
 
         [self presentViewController:alertController animated:YES completion:nil];
-    } else {
-        if (![[self preferences] objectForKey:@"wasWelcomed"] || ![[[self preferences] objectForKey:@"wasWelcomed"] isEqual:@(YES)]) {
-            WelcomeViewController* controller = [WelcomeViewController new];
-            [self presentViewController:controller animated:YES completion:nil];
-            [[self preferences] setBool:YES forKey:@"wasWelcomed"];
-        }
     }
     
 }
@@ -218,9 +212,7 @@
 
 - (void)resetPreferences {
 
-    for (NSString* key in [[self preferences] dictionaryRepresentation]) {
-        if (![key isEqualToString:@"wasWelcomed"]) [[self preferences] removeObjectForKey:key];
-    }
+    [[self preferences] removeAllObjects];
     
     [[self enableSwitch] setOn:NO animated:YES];
     [self respring];
