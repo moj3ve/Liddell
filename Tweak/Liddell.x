@@ -220,6 +220,7 @@ void testBanner() {
     [bulletin setSectionID:@"com.apple.MobileSMS"];
     [bulletin setBulletinID:[processInfo globallyUniqueString]];
     [bulletin setRecordID:[processInfo globallyUniqueString]];
+    [bulletin setDate:[NSDate date]];
 
     if ([bbServer respondsToSelector:@selector(publishBulletin:destinations:)]) {
         dispatch_sync(queue, ^{

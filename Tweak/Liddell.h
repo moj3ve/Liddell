@@ -73,6 +73,7 @@ NSString* customBorderColorValue = @"FFFFFF";
 @property(nonatomic, copy)NSString* sectionID;
 @property(nonatomic, copy)NSString* bulletinID;
 @property(nonatomic, copy)NSString* recordID;
+@property(nonatomic, retain)NSDate* date;
 @end
 
 @interface BBServer : NSObject
