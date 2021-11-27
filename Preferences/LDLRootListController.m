@@ -42,7 +42,7 @@
 
     self.iconView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
     [[self iconView] setContentMode:UIViewContentModeScaleAspectFit];
-    [[self iconView] setImage:[UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/LiddellPreferences.bundle/icon.png"]];
+    [[self iconView] setImage:[UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/LiddellPreferences.bundle/Icon.png"]];
     [[self iconView] setAlpha:0];
     [[[self navigationItem] titleView] addSubview:[self iconView]];
 
