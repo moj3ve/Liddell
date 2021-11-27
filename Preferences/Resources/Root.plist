@@ -542,6 +542,14 @@
 			<key>action</key>
 			<string>resetPrompt</string>
 		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Test Banner</string>
+			<key>action</key>
+			<string>testBanner:</string>
+		</dict>
 
 		<dict>
 			<key>cell</key>
@@ -605,7 +613,7 @@
 			<key>label</key>
 			<string>Discord</string>
 			<key>subtitle</key>
-			<string>Chat with us 👾</string>
+			<string>Chat with us 💬</string>
 			<key>url</key>
 			<string>https://discord.gg/tKUPZrS7ve</string>
 		</dict>
@@ -618,6 +626,17 @@
 			<string>GitHub 🫖</string>
 			<key>url</key>
 			<string>https://github.com/schneelittchen/Liddell</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<key>PSGroupCell</key>
+			<key>footerText</key>
+			<string>Liddell is Alice in wonderland's last name</string>
+			<key>isStaticText</key>
+			<true/>
+			<key>footerAlignment</key>
+			<real>1</real>
 		</dict>
 
 	</array>
