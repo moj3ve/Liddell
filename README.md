@@ -7,7 +7,7 @@ Liddell notification banners
 
 ## Compiling
   - [Theos](https://theos.dev/) is required to compile the project
-  - Depends on libKitten and libGCUniversal
+  - Depends on [libKitten](https://github.com/schneelittchen/libKitten) and [libGCUniversal](https://github.com/MrGcGamer/LibGcUniversalDocumentation)
   - You may want to edit the root `Makefile` to use your Theos SDK
 
 ## License
