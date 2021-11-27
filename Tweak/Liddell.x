@@ -1,5 +1,8 @@
 #import "Liddell.h"
 
+BBServer* bbServer = nil;
+dispatch_queue_t queue;
+
 %group Liddell
 
 %hook NCNotificationShortLookView
@@ -205,6 +208,42 @@
 
 %end
 
+%group TestNotifications
+
+void testBanner() {
+    
+	BBBulletin* bulletin = [%c(BBBulletin) new];
+    NSProcessInfo* processInfo = [NSProcessInfo processInfo];
+
+	[bulletin setTitle:@"Alice"];
+    [bulletin setMessage:@"Another day, a different dream perhaps?"];
+    [bulletin setSectionID:@"com.apple.MobileSMS"];
+    [bulletin setBulletinID:[processInfo globallyUniqueString]];
+    [bulletin setRecordID:[processInfo globallyUniqueString]];
+
+    if ([bbServer respondsToSelector:@selector(publishBulletin:destinations:)]) {
+        dispatch_sync(queue, ^{
+            [bbServer publishBulletin:bulletin destinations:15];
+        });
+    }
+
+}
+
+%hook BBServer
+
+- (id)initWithQueue:(id)arg1 {
+
+    bbServer = %orig;
+    queue = [self valueForKey:@"_queue"];
+
+    return bbServer;
+
+}
+
+%end
+
+%end
+
 %ctor {
     
     preferences = [[HBPreferences alloc] initWithIdentifier:@"love.litten.liddellpreferences"];
@@ -247,5 +286,8 @@
     }
     
     %init(Liddell);
+    %init(TestNotifications);
+
+    CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)testBanner, (CFStringRef)@"love.litten.liddell/TestBanner", NULL, (CFNotificationSuspensionBehavior)kNilOptions);
 
 }

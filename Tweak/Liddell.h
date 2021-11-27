@@ -2,6 +2,7 @@
 #import "Liddell-Swift.h"
 #import <Kitten/libKitten.h>
 #import "GcUniversal/GcColorPickerUtils.h"
+#import "dlfcn.h"
 #import <Cephei/HBPreferences.h>
 
 HBPreferences* preferences = nil;
@@ -60,4 +61,23 @@ NSString* customBorderColorValue = @"FFFFFF";
 
 @interface UIView (Liddell)
 - (id)_viewControllerForAncestor;
+@end
+
+@interface BBAction : NSObject
++ (id)actionWithLaunchBundleID:(id)arg1 callblock:(id)arg2;
+@end
+
+@interface BBBulletin : NSObject
+@property(nonatomic, copy)NSString* title;
+@property(nonatomic, copy)NSString* message;
+@property(nonatomic, copy)NSString* sectionID;
+@property(nonatomic, copy)NSString* bulletinID;
+@property(nonatomic, copy)NSString* recordID;
+@end
+
+@interface BBServer : NSObject
+- (void)publishBulletin:(id)arg1 destinations:(unsigned long long)arg2;
+@end
+
+@interface BBObserver : NSObject
 @end
