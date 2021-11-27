@@ -22,7 +22,7 @@
 	[NSLayoutConstraint activateConstraints:@[
 		[self.separatorView.topAnchor constraintEqualToAnchor:self.topAnchor],
 		[self.separatorView.centerXAnchor constraintEqualToAnchor:self.centerXAnchor],
-		[self.separatorView.heightAnchor constraintEqualToConstant:60],
+		[self.separatorView.heightAnchor constraintEqualToConstant:48],
 		[self.separatorView.widthAnchor constraintEqualToConstant:1]
 	]];
 
@@ -41,7 +41,7 @@
 
     [[self leftUserAvatarImageView] setContentMode:UIViewContentModeScaleAspectFill];
     [[self leftUserAvatarImageView] setClipsToBounds:YES];
-    [[[self leftUserAvatarImageView] layer] setCornerRadius:22.5];
+    [[[self leftUserAvatarImageView] layer] setCornerRadius:21.5];
     [[[self leftUserAvatarImageView] layer] setBorderWidth:2];
     [[[self leftUserAvatarImageView] layer] setBorderColor:[[[UIColor labelColor] colorWithAlphaComponent:0.1] CGColor]];
     [self addSubview:[self leftUserAvatarImageView]];
@@ -50,8 +50,8 @@
 	[NSLayoutConstraint activateConstraints:@[
         [self.leftUserAvatarImageView.centerYAnchor constraintEqualToAnchor:self.centerYAnchor],
 		[self.leftUserAvatarImageView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor constant:16],
-        [self.leftUserAvatarImageView.widthAnchor constraintEqualToConstant:45],
-        [self.leftUserAvatarImageView.heightAnchor constraintEqualToConstant:45]
+        [self.leftUserAvatarImageView.widthAnchor constraintEqualToConstant:43],
+        [self.leftUserAvatarImageView.heightAnchor constraintEqualToConstant:43]
 	]];
 
 
@@ -59,6 +59,7 @@
     self.leftUserDisplayNameLabel = [UILabel new];
     [[self leftUserDisplayNameLabel] setText:[self leftUserDisplayName]];
     [[self leftUserDisplayNameLabel] setFont:[UIFont systemFontOfSize:17 weight:UIFontWeightSemibold]];
+    [[self leftUserDisplayNameLabel] setTextColor:[UIColor labelColor]];
     [self addSubview:[self leftUserDisplayNameLabel]];
 
     [[self leftUserDisplayNameLabel] setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -72,7 +73,8 @@
     // left user username
     self.leftUserUsernameLabel = [UILabel new];
     [[self leftUserUsernameLabel] setText:[NSString stringWithFormat:@"@%@", [self leftUserUsername]]];
-    [[self leftUserUsernameLabel] setFont:[UIFont systemFontOfSize:13 weight:UIFontWeightRegular]];
+    [[self leftUserUsernameLabel] setFont:[UIFont systemFontOfSize:11 weight:UIFontWeightRegular]];
+    [[self leftUserUsernameLabel] setTextColor:[[UIColor labelColor] colorWithAlphaComponent:0.6]];
     [self addSubview:[self leftUserUsernameLabel]];
 
     [[self leftUserUsernameLabel] setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -116,7 +118,7 @@
     [[self leftUserAvatarImageView] setContentMode:UIViewContentModeScaleAspectFill];
 
     [[self rightUserAvatarImageView] setClipsToBounds:YES];
-    [[[self rightUserAvatarImageView] layer] setCornerRadius:22.5];
+    [[[self rightUserAvatarImageView] layer] setCornerRadius:21.5];
     [[[self rightUserAvatarImageView] layer] setBorderWidth:2];
     [[[self rightUserAvatarImageView] layer] setBorderColor:[[[UIColor labelColor] colorWithAlphaComponent:0.1] CGColor]];
     [self addSubview:[self rightUserAvatarImageView]];
@@ -125,14 +127,15 @@
 	[NSLayoutConstraint activateConstraints:@[
         [self.rightUserAvatarImageView.centerYAnchor constraintEqualToAnchor:self.centerYAnchor],
 		[self.rightUserAvatarImageView.leadingAnchor constraintEqualToAnchor:self.separatorView.leadingAnchor constant:16],
-        [self.rightUserAvatarImageView.widthAnchor constraintEqualToConstant:45],
-        [self.rightUserAvatarImageView.heightAnchor constraintEqualToConstant:45]
+        [self.rightUserAvatarImageView.widthAnchor constraintEqualToConstant:43],
+        [self.rightUserAvatarImageView.heightAnchor constraintEqualToConstant:43]
 	]];
 
     // right user display name
     self.rightUserDisplayNameLabel = [UILabel new];
     [[self rightUserDisplayNameLabel] setText:[self rightUserDisplayName]];
     [[self rightUserDisplayNameLabel] setFont:[UIFont systemFontOfSize:17 weight:UIFontWeightSemibold]];
+    [[self rightUserDisplayNameLabel] setTextColor:[UIColor labelColor]];
     [self addSubview:[self rightUserDisplayNameLabel]];
 
     [[self rightUserDisplayNameLabel] setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -146,7 +149,8 @@
     // right user username
     self.rightUserUsernameLabel = [UILabel new];
     [[self rightUserUsernameLabel] setText:[NSString stringWithFormat:@"@%@", [self rightUserUsername]]];
-    [[self rightUserUsernameLabel] setFont:[UIFont systemFontOfSize:13 weight:UIFontWeightRegular]];
+    [[self rightUserUsernameLabel] setFont:[UIFont systemFontOfSize:11 weight:UIFontWeightRegular]];
+    [[self rightUserUsernameLabel] setTextColor:[[UIColor labelColor] colorWithAlphaComponent:0.6]];
     [self addSubview:[self rightUserUsernameLabel]];
 
     [[self rightUserUsernameLabel] setTranslatesAutoresizingMaskIntoConstraints:NO];
