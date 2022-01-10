@@ -2,7 +2,7 @@
 Liddell notification banners
 
 ## Installation
-1. Add this repository to your package manager: https://repo.litten.love
+1. Add this repository to your package manager: `TBD`
 2. Install Liddell
 
 ## Compiling
@@ -11,8 +11,8 @@ Liddell notification banners
   - You may want to edit the root `Makefile` to use your Theos SDK
 
 ## License
-If you take code from this repository please link it, or my [Twitter](https://twitter.com/schneelittchen) to your project  
-You may not redistribute this source code or packages from it  
+If you take code from this repository please link it, or my [Twitter](https://twitter.com/schneelittchen) to your project<br>
+You may not redistribute this source code or packages from it<br>
 You may not use this project to make profit like money
 
 ## Credits
