@@ -47,7 +47,7 @@ dispatch_queue_t queue;
             [self.liddellView.topAnchor constraintEqualToAnchor:self.topAnchor constant:offsetValue],
             [self.liddellView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor],
             [self.liddellView.trailingAnchor constraintEqualToAnchor:self.trailingAnchor],
-            [self.liddellView.heightAnchor constraintEqualToConstant:heightValue],
+            [self.liddellView.heightAnchor constraintEqualToConstant:heightValue]
         ]];
     }
 
@@ -66,7 +66,7 @@ dispatch_queue_t queue;
             [self.liddellBlurView.topAnchor constraintEqualToAnchor:self.liddellView.topAnchor],
             [self.liddellBlurView.leadingAnchor constraintEqualToAnchor:self.liddellView.leadingAnchor],
             [self.liddellBlurView.trailingAnchor constraintEqualToAnchor:self.liddellView.trailingAnchor],
-            [self.liddellBlurView.bottomAnchor constraintEqualToAnchor:self.liddellView.bottomAnchor],
+            [self.liddellBlurView.bottomAnchor constraintEqualToAnchor:self.liddellView.bottomAnchor]
         ]];
     }
     
@@ -85,7 +85,7 @@ dispatch_queue_t queue;
             [self.liddellIconView.leadingAnchor constraintEqualToAnchor:self.liddellView.leadingAnchor constant:8],
             [self.liddellIconView.centerYAnchor constraintEqualToAnchor:self.liddellView.centerYAnchor],
             [self.liddellIconView.heightAnchor constraintEqualToConstant:heightValue - 13],
-            [self.liddellIconView.widthAnchor constraintEqualToConstant:heightValue - 13],
+            [self.liddellIconView.widthAnchor constraintEqualToConstant:heightValue - 13]
         ]];
     }
 
@@ -126,12 +126,12 @@ dispatch_queue_t queue;
         if (showIconSwitch && [self liddellIconView]) {
             [NSLayoutConstraint activateConstraints:@[
                 [self.liddellTitleLabel.leadingAnchor constraintEqualToAnchor:self.liddellIconView.trailingAnchor constant:8],
-                [self.liddellTitleLabel.centerYAnchor constraintEqualToAnchor:self.liddellView.centerYAnchor],
+                [self.liddellTitleLabel.centerYAnchor constraintEqualToAnchor:self.liddellView.centerYAnchor]
             ]];
         } else {
             [NSLayoutConstraint activateConstraints:@[
                 [self.liddellTitleLabel.leadingAnchor constraintEqualToAnchor:self.liddellView.leadingAnchor constant:8],
-                [self.liddellTitleLabel.centerYAnchor constraintEqualToAnchor:self.liddellView.centerYAnchor],
+                [self.liddellTitleLabel.centerYAnchor constraintEqualToAnchor:self.liddellView.centerYAnchor]
             ]];
         }
     }
@@ -179,19 +179,19 @@ dispatch_queue_t queue;
             [NSLayoutConstraint activateConstraints:@[
                 [self.liddellContentLabel.leadingAnchor constraintEqualToAnchor:self.liddellTitleLabel.trailingAnchor constant:8],
                 [self.liddellContentLabel.trailingAnchor constraintEqualToAnchor:self.liddellView.trailingAnchor constant:-12],
-                [self.liddellContentLabel.centerYAnchor constraintEqualToAnchor:self.liddellView.centerYAnchor],
+                [self.liddellContentLabel.centerYAnchor constraintEqualToAnchor:self.liddellView.centerYAnchor]
             ]];
         } else if (showIconSwitch && !showTitleSwitch) {
             [NSLayoutConstraint activateConstraints:@[
                 [self.liddellContentLabel.leadingAnchor constraintEqualToAnchor:self.liddellIconView.trailingAnchor constant:8],
                 [self.liddellContentLabel.trailingAnchor constraintEqualToAnchor:self.liddellView.trailingAnchor constant:-12],
-                [self.liddellContentLabel.centerYAnchor constraintEqualToAnchor:self.liddellView.centerYAnchor],
+                [self.liddellContentLabel.centerYAnchor constraintEqualToAnchor:self.liddellView.centerYAnchor]
             ]];
         } else if (!(showIconSwitch && [self liddellIconView]) && !(showTitleSwitch && [self liddellTitleLabel])) {
             [NSLayoutConstraint activateConstraints:@[
                 [self.liddellContentLabel.leadingAnchor constraintEqualToAnchor:self.liddellView.leadingAnchor constant:8],
                 [self.liddellContentLabel.trailingAnchor constraintEqualToAnchor:self.liddellView.trailingAnchor constant:-12],
-                [self.liddellContentLabel.centerYAnchor constraintEqualToAnchor:self.liddellView.centerYAnchor],
+                [self.liddellContentLabel.centerYAnchor constraintEqualToAnchor:self.liddellView.centerYAnchor]
             ]];
         }
     }

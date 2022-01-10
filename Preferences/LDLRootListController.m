@@ -36,7 +36,7 @@
         [self.titleLabel.topAnchor constraintEqualToAnchor:self.navigationItem.titleView.topAnchor],
         [self.titleLabel.leadingAnchor constraintEqualToAnchor:self.navigationItem.titleView.leadingAnchor],
         [self.titleLabel.trailingAnchor constraintEqualToAnchor:self.navigationItem.titleView.trailingAnchor],
-        [self.titleLabel.bottomAnchor constraintEqualToAnchor:self.navigationItem.titleView.bottomAnchor],
+        [self.titleLabel.bottomAnchor constraintEqualToAnchor:self.navigationItem.titleView.bottomAnchor]
     ]];
 
 
@@ -51,7 +51,7 @@
         [self.iconView.topAnchor constraintEqualToAnchor:self.navigationItem.titleView.topAnchor],
         [self.iconView.leadingAnchor constraintEqualToAnchor:self.navigationItem.titleView.leadingAnchor],
         [self.iconView.trailingAnchor constraintEqualToAnchor:self.navigationItem.titleView.trailingAnchor],
-        [self.iconView.bottomAnchor constraintEqualToAnchor:self.navigationItem.titleView.bottomAnchor],
+        [self.iconView.bottomAnchor constraintEqualToAnchor:self.navigationItem.titleView.bottomAnchor]
     ]];
 
 
@@ -71,7 +71,7 @@
         [self.headerImageView.topAnchor constraintEqualToAnchor:self.headerView.topAnchor],
         [self.headerImageView.leadingAnchor constraintEqualToAnchor:self.headerView.leadingAnchor],
         [self.headerImageView.trailingAnchor constraintEqualToAnchor:self.headerView.trailingAnchor],
-        [self.headerImageView.bottomAnchor constraintEqualToAnchor:self.headerView.bottomAnchor],
+        [self.headerImageView.bottomAnchor constraintEqualToAnchor:self.headerView.bottomAnchor]
     ]];
 
     if ([[NSFileManager defaultManager] fileExistsAtPath:@"/Library/MobileSubstrate/DynamicLibraries/Liddell.disabled"]) {
