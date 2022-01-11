@@ -7,7 +7,7 @@
 	
 		<dict>
 			<key>cellClass</key>
-			<string>CustomTwitterCell</string>
+			<string>CallaTwitterCell</string>
 			<key>leftUserDisplayName</key>
 			<string>Litten</string>
 			<key>leftUserUsername</key>

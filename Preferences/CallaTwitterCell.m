@@ -1,6 +1,6 @@
-#import "CustomTwitterCell.h"
+#import "CallaTwitterCell.h"
 
-@implementation CustomTwitterCell
+@implementation CallaTwitterCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier specifier:(PSSpecifier *)specifier {
 

@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 #import <Preferences/PSSpecifier.h>
 
-@interface CustomTwitterCell : PSTableCell
+@interface CallaTwitterCell : PSTableCell
 @property(nonatomic, retain)UIImageView* leftUserAvatarImageView;
 @property(nonatomic, retain)UILabel* leftUserDisplayNameLabel;
 @property(nonatomic, retain)UILabel* leftUserUsernameLabel;
