@@ -1,3 +1,10 @@
+//
+//  CallaTwitterCell.m
+//  CallaTwitterCell
+//
+//  Created by Alexandra (@schneelittchen)
+//
+
 #import "CallaTwitterCell.h"
 
 @implementation CallaTwitterCell

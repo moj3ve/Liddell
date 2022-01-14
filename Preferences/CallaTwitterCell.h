@@ -1,3 +1,10 @@
+//
+//  CallaTwitterCell.h
+//  CallaTwitterCell
+//
+//  Created by Alexandra (@schneelittchen)
+//
+
 #import <UIKit/UIKit.h>
 #import <Preferences/PSSpecifier.h>
 
