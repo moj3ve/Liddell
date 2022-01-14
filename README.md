@@ -1,4 +1,4 @@
-# Liddell
+# Liddell 🫖
 Liddell notification banners
 
 ## Installation
