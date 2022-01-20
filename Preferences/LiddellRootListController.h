@@ -1,3 +1,10 @@
+//
+//  LiddellRootListController.h
+//  Liddell
+//
+//  Created by Alexandra (@schneelittchen)
+//
+
 #import <Preferences/PSListController.h>
 #import <Preferences/PSSpecifier.h>
 #import <CepheiPrefs/HBRootListController.h>

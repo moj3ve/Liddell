@@ -1,3 +1,10 @@
+//
+//  LiddellRootListController.m
+//  Liddell
+//
+//  Created by Alexandra (@schneelittchen)
+//
+
 #include "LiddellRootListController.h"
 
 @implementation LiddellRootListController

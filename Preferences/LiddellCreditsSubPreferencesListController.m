@@ -1,3 +1,10 @@
+//
+//  LiddellCreditsSubPreferencesListController.m
+//  Liddell
+//
+//  Created by Alexandra (@schneelittchen)
+//
+
 #import "LiddellCreditsSubPreferencesListController.h"
 
 @implementation LiddellCreditsSubPreferencesListController

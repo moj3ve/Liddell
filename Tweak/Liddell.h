@@ -1,3 +1,10 @@
+//
+//  Liddell.h
+//  Liddell
+//
+//  Created by Alexandra (@schneelittchen)
+//
+
 #import <UIKit/UIKit.h>
 #import "Liddell-Swift.h"
 #import <Kitten/libKitten.h>

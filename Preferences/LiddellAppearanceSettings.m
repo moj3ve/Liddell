@@ -1,3 +1,10 @@
+//
+//  LiddellAppearanceSettings.m
+//  Liddell
+//
+//  Created by Alexandra (@schneelittchen)
+//
+
 #import "LiddellRootListController.h"
 
 @implementation LiddellAppearanceSettings

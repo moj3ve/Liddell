@@ -1,3 +1,10 @@
+//
+//  LiddellCreditsSubPreferencesListController.h
+//  Liddell
+//
+//  Created by Alexandra (@schneelittchen)
+//
+
 #import <Preferences/PSListController.h>
 #import <Preferences/PSListItemsController.h>
 #import <Preferences/PSSpecifier.h>

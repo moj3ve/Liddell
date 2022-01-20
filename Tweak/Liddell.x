@@ -1,3 +1,10 @@
+//
+//  Liddell.x
+//  Liddell
+//
+//  Created by Alexandra (@schneelittchen)
+//
+
 #import "Liddell.h"
 
 BBServer* bbServer = nil;
