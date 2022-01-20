@@ -21,7 +21,7 @@ dispatch_queue_t queue;
 %property(nonatomic, retain)UILabel* liddellTitleLabel;
 %property(nonatomic, retain)MarqueeLabel* liddellContentLabel;
 
-- (void)didMoveToWindow { // add Liddell
+- (void)didMoveToWindow {
 
     %orig;
 
@@ -205,7 +205,7 @@ dispatch_queue_t queue;
 
 }
 
-- (void)_setGrabberVisible:(BOOL)arg1 { // hide the notification grabber
+- (void)_setGrabberVisible:(BOOL)arg1 {
 
     %orig(NO);
 

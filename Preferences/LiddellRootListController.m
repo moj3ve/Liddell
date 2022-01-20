@@ -81,6 +81,7 @@
         [self.headerImageView.bottomAnchor constraintEqualToAnchor:self.headerView.bottomAnchor]
     ]];
 
+    // if liddell was disabled through icleaner pro show an alert with options to reset the preferences, go back or ignore it
     if ([[NSFileManager defaultManager] fileExistsAtPath:@"/Library/MobileSubstrate/DynamicLibraries/Liddell.disabled"]) {
         [[self enableSwitch] setEnabled:NO];
 
@@ -103,6 +104,7 @@
         [alertController addAction:ignoreAction];
 
         [self presentViewController:alertController animated:YES completion:nil];
+    // tell the user that the tweak daynightswitch breaks the enable switch in the top right corner
     } else if ([[NSFileManager defaultManager] fileExistsAtPath:@"/Library/MobileSubstrate/DynamicLibraries/DayNightSwitch.dylib"]) {
         UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Liddell" message:@"Liddell has detected that you have DayNightSwitch installed, which causes issues with Liddell's preferences\n\n To continue, please disable DayNightSwitch with iCleaner Pro or uninstall it temporarily" preferredStyle:UIAlertControllerStyleAlert];
 
