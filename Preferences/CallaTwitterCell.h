@@ -24,4 +24,6 @@
 @property(nonatomic, retain)NSString* leftUserUsername;
 @property(nonatomic, retain)NSString* rightUserDisplayName;
 @property(nonatomic, retain)NSString* rightUserUsername;
+- (void)visitLeftUserProfile;
+- (void)visitRightUserProfile;
 @end

@@ -38,7 +38,7 @@
     self.leftUserAvatarImageView = [UIImageView new];
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
-		UIImage* avatar = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://unavatar.io/%@", [self leftUserUsername]]]]];	
+		UIImage* avatar = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://unavatar.io/%@?fallback=false", [self leftUserUsername]]]]];	
         dispatch_async(dispatch_get_main_queue(), ^{
 			[UIView transitionWithView:[self leftUserAvatarImageView] duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
 				[[self leftUserAvatarImageView] setImage:avatar];
@@ -114,7 +114,7 @@
     self.rightUserAvatarImageView = [UIImageView new];
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
-		UIImage* avatar = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://unavatar.io/%@", [self rightUserUsername]]]]];	
+		UIImage* avatar = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://unavatar.io/%@?fallback=false", [self rightUserUsername]]]]];	
         dispatch_async(dispatch_get_main_queue(), ^{
 			[UIView transitionWithView:[self rightUserAvatarImageView] duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
 				[[self rightUserAvatarImageView] setImage:avatar];
