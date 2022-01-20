@@ -28,6 +28,18 @@ dispatch_queue_t queue;
     if (![[self _viewControllerForAncestor] respondsToSelector:@selector(delegate)]) return;
     if (![[[self _viewControllerForAncestor] delegate] isKindOfClass:%c(SBNotificationBannerDestination)]) return; // check if the notification is a banner
 
+    // get the actual notification title, the title property of the hooked class is uppercase
+    UIViewController* controller = nil;
+    NCNotificationRequest* request = nil;
+    if ([[[self nextResponder] nextResponder] nextResponder]) {
+        controller = (UIViewController *)[[[self nextResponder] nextResponder] nextResponder];
+        if ([controller isKindOfClass:%c(NCNotificationShortLookViewController)] && [((NCNotificationShortLookViewController *) controller) notificationRequest])
+            request = [((NCNotificationShortLookViewController *) controller) notificationRequest];
+    }
+
+    if (!request || ![request content]) return;
+    NCNotificationContent* content = [request content];
+
     // remove the original notification
     for (UIView* subview in [self subviews]) {
         if (subview == [self liddellView]) continue;
@@ -100,7 +112,7 @@ dispatch_queue_t queue;
     // app name
     if (showTitleSwitch && ![self liddellTitleLabel]) {
         self.liddellTitleLabel = [UILabel new];
-        [[self liddellTitleLabel] setText:[[self title] capitalizedString]];
+        [[self liddellTitleLabel] setText:[content header]];
         [[self liddellTitleLabel] setFont:[UIFont boldSystemFontOfSize:titleFontSizeValue]];
         if (textContentValue == 0 || textContentValue == 2) {
             if (textColorValue == 0) {

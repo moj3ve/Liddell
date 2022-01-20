@@ -55,7 +55,6 @@ NSString* customBorderColorValue = @"FFFFFF";
 
 @interface NCNotificationShortLookView : MTTitledPlatterView
 @property(nonatomic, copy)NSArray* icons;
-@property(nonatomic, copy)NSString* title;
 @property(nonatomic, copy)NSString* primaryText;
 @property(nonatomic, copy)NSString* secondaryText;
 @property(nonatomic, retain)UIView* liddellView;
@@ -64,6 +63,18 @@ NSString* customBorderColorValue = @"FFFFFF";
 @property(nonatomic, retain)UIImageView* liddellIconView;
 @property(nonatomic, retain)UILabel* liddellTitleLabel;
 @property(nonatomic, retain)MarqueeLabel* liddellContentLabel;
+@end
+
+@interface NCNotificationContent : NSObject
+@property(nonatomic, copy, readonly)NSString* header;
+@end
+
+@interface NCNotificationRequest : NSObject
+@property(nonatomic, readonly)NCNotificationContent* content;
+@end
+
+@interface NCNotificationShortLookViewController : UIViewController
+@property(nonatomic, retain)NCNotificationRequest* notificationRequest;
 @end
 
 @interface UIView (Liddell)
