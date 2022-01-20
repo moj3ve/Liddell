@@ -605,17 +605,6 @@
 			<string>https://github.com/schneelittchen/Liddell/issues/new</string>
 		</dict>
 
-		<dict>
-			<key>cell</key>
-			<key>PSGroupCell</key>
-			<key>footerText</key>
-			<string>Liddell is Alice in Wonderland's last name</string>
-			<key>isStaticText</key>
-			<true/>
-			<key>footerAlignment</key>
-			<real>1</real>
-		</dict>
-
 	</array>
 	<key>title</key>
 	<string>Liddell</string>
