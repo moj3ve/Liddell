@@ -13,7 +13,7 @@
 #import <Cephei/HBPreferences.h>
 
 HBPreferences* preferences = nil;
-BOOL enabled = NO;
+BOOL enabled = YES;
 
 // visibility
 BOOL showIconSwitch = YES;
