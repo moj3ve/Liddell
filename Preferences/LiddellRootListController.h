@@ -5,11 +5,11 @@
 #import <Cephei/HBPreferences.h>
 #import <Cephei/HBRespringController.h>
 
-@interface LDLAppearanceSettings : HBAppearanceSettings
+@interface LiddellAppearanceSettings : HBAppearanceSettings
 @end
 
-@interface LDLRootListController : HBRootListController
-@property(nonatomic, retain)LDLAppearanceSettings* appearanceSettings;
+@interface LiddellRootListController : HBRootListController
+@property(nonatomic, retain)LiddellAppearanceSettings* appearanceSettings;
 @property(nonatomic, retain)HBPreferences* preferences;
 @property(nonatomic, retain)UISwitch* enableSwitch;
 @property(nonatomic, retain)UIBarButtonItem* item;

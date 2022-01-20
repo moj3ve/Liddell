@@ -1,12 +1,12 @@
-#include "LDLRootListController.h"
+#include "LiddellRootListController.h"
 
-@implementation LDLRootListController
+@implementation LiddellRootListController
 
 - (void)viewDidLoad {
 
     [super viewDidLoad];
 
-    self.appearanceSettings = [LDLAppearanceSettings new];
+    self.appearanceSettings = [LiddellAppearanceSettings new];
     self.hb_appearanceSettings = [self appearanceSettings];
 
 

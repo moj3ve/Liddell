@@ -1,12 +1,12 @@
-#import "LDLCreditsSubPreferencesListController.h"
+#import "LiddellCreditsSubPreferencesListController.h"
 
-@implementation LDLCreditsSubPreferencesListController
+@implementation LiddellCreditsSubPreferencesListController
 
 - (void)viewDidLoad {
 
     [super viewDidLoad];
 
-    self.appearanceSettings = [LDLAppearanceSettings new];
+    self.appearanceSettings = [LiddellAppearanceSettings new];
     self.hb_appearanceSettings = [self appearanceSettings];
 
     self.blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleRegular];
@@ -36,7 +36,7 @@
 
 - (void)loadFromSpecifier:(PSSpecifier *)specifier {
 
-    NSString* sub = [specifier propertyForKey:@"LDLSub"];
+    NSString* sub = [specifier propertyForKey:@"LiddellSub"];
     NSString* title = [specifier name];
 
     _specifiers = [self loadSpecifiersFromPlistName:sub target:self];

@@ -4,11 +4,11 @@
 #import <CepheiPrefs/HBListController.h>
 #import <CepheiPrefs/HBAppearanceSettings.h>
 
-@interface LDLAppearanceSettings : HBAppearanceSettings
+@interface LiddellAppearanceSettings : HBAppearanceSettings
 @end
 
-@interface LDLCreditsSubPreferencesListController : HBListController
-@property(nonatomic, retain)LDLAppearanceSettings* appearanceSettings;
+@interface LiddellCreditsSubPreferencesListController : HBListController
+@property(nonatomic, retain)LiddellAppearanceSettings* appearanceSettings;
 @property(nonatomic, retain)UILabel* titleLabel;
 @property(nonatomic, retain)UIBlurEffect* blur;
 @property(nonatomic, retain)UIVisualEffectView* blurView;

@@ -1,6 +1,6 @@
-#import "LDLRootListController.h"
+#import "LiddellRootListController.h"
 
-@implementation LDLAppearanceSettings
+@implementation LiddellAppearanceSettings
 
 - (UIColor *)tintColor {
 

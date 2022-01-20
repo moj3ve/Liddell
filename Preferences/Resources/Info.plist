@@ -19,6 +19,6 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>NSPrincipalClass</key>
-	<string>LDLRootListController</string>
+	<string>LiddellRootListController</string>
 </dict>
 </plist>

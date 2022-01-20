@@ -561,8 +561,8 @@
  			<key>label</key>
  			<string>Credits</string>
  			<key>detail</key>
- 			<string>LDLCreditsSubPreferencesListController</string>
- 			<key>LDLSub</key>
+ 			<string>LiddellCreditsSubPreferencesListController</string>
+ 			<key>LiddellSub</key>
  			<string>SubPreferences/Credits</string>
  		</dict>
 
