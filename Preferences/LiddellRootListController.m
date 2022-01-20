@@ -184,10 +184,10 @@
 
 - (void)setEnabled {
         
-    if ([[[self preferences] objectForKey:@"Enabled"] isEqual:@(YES)])
-        [[self preferences] setBool:NO forKey:@"Enabled"];
+    if ([[[self preferences] objectForKey:@"enabled"] isEqual:@(YES)])
+        [[self preferences] setBool:NO forKey:@"enabled"];
     else
-        [[self preferences] setBool:YES forKey:@"Enabled"];
+        [[self preferences] setBool:YES forKey:@"enabled"];
 
     [self respring];
 
@@ -195,7 +195,7 @@
 
 - (void)setEnabledState {
 
-    if ([[[self preferences] objectForKey:@"Enabled"] isEqual:@(YES)])
+    if ([[[self preferences] objectForKey:@"enabled"] isEqual:@(YES)])
         [[self enableSwitch] setOn:YES animated:YES];
     else
         [[self enableSwitch] setOn:NO animated:YES];

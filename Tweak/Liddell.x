@@ -256,7 +256,7 @@ void testBanner() {
     
     preferences = [[HBPreferences alloc] initWithIdentifier:@"love.litten.liddellpreferences"];
 
-	[preferences registerBool:&enabled default:NO forKey:@"Enabled"];
+	[preferences registerBool:&enabled default:NO forKey:@"enabled"];
 	if (!enabled) return;
 
     // visibility
